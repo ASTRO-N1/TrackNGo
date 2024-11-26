@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
       L.latLng(origin),
       L.latLng(destination),
     ],
-    routeWhileDragging: true,
+    routeWhileDragging: false,
     lineOptions: {
       styles: [{ color: 'blue', weight: 4, opacity: 0.7 }] // Blue route
     }
