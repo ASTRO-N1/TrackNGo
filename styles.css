@@ -1,0 +1,605 @@
+/* Existing CSS */
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+html,
+body {
+  /* background-color: #f7f3c9; */
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 80px;
+  position: relative;
+  z-index: 500;
+  top: 0;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0px;
+  padding-left: 50px;
+  padding-right: 20px; /* Adjusted padding-right */
+  box-shadow: 0px 12px 39px 10px rgba(62, 66, 66, 0.397);
+}
+
+/* Glass container with glassmorphism effect */
+.glass-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 350px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 15px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+
+/* Image inside glass container */
+.top-image {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  border-radius: 0 0 15px 15px;
+}
+
+.logo {
+  width: 200px;
+  height: 150px;
+}
+
+.nav-sep {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  align-items: center;
+  gap: 10px; /* Space between buttons */
+  padding: 10px 0; /* Adjust padding if necessary */
+}
+
+/* Optional: If you want to ensure buttons stay close together */
+button {
+  margin-right: 0; /* Remove any right margin */
+}
+
+/* From Uiverse.io by SteveBloX */
+.card {
+  position: absolute;
+  top: 290px;
+  left: 180px;
+  box-sizing: border-box;
+  width: calc(100% - 350px);
+  height: 120px;
+  background: rgb(255, 255, 255);
+  /* border: 1px solid white; */
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  /* backdrop-filter: blur(8px); */
+  border-radius: 25px;
+  text-align: center;
+  /* transition: all 0.5s; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: bolder;
+  color: black;
+}
+
+.in1 {
+  padding-top: 15px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+}
+.in2 {
+  padding-top: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+}
+.in3 {
+  padding-top: 15px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+}
+.in4 {
+  /* padding-top: 15px; */
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: #f38933;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  transition: background-color 0.1s ease;
+}
+
+.in4:active {
+  background-color: #d1863a;
+}
+
+.in1,
+.in2 {
+  border-right: 1px solid darkgrey; /* Customize the color and width */
+}
+
+.in1 p {
+  font-size: 16px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.in1 h3 {
+  font-size: 14px;
+  font-weight: lighter;
+  color: gray;
+  margin: 5px 0 0;
+}
+.in2 p {
+  font-size: 16px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.in2 h3 {
+  font-size: 14px;
+  font-weight: lighter;
+  color: gray;
+  margin: 5px 0 0;
+}
+.in3 p {
+  font-size: 16px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.in3 h3 {
+  font-size: 14px;
+  font-weight: lighter;
+  color: gray;
+  margin: 5px 0 0;
+}
+
+/* Input styling */
+
+.search-box {
+  position: relative;
+  display: inline-block;
+}
+
+.location-display {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 2px 2px 2px 0px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 4px;
+}
+
+#location-input {
+  font-size: 16px;
+  padding: 2px 2px 2px 0px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.location-display2 {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 2px 2px 2px 0px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 4px;
+}
+
+#location-input2 {
+  font-size: 16px;
+  padding: 2px 2px 2px 0px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: #ffa726;
+  cursor: pointer;
+}
+
+/* Optional: Styling for when the input is visible */
+.search-box.active #location-input {
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+.search-box.active .location-display {
+  display: none;
+}
+
+.search-box2.active #location-input2 {
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+.search-box2.active .location-display2 {
+  display: none;
+}
+
+/* Input Styling end */
+
+.title {
+  position: absolute;
+  top: 450px;
+  left: 365px;
+}
+
+.title h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: Normal;
+  font-size: 50px;
+  color: #061d34;
+}
+
+.arrow {
+  /* background-color: red; */
+  position: absolute;
+  top: 450px;
+  right: 200px;
+  width: 80px;
+  height: 80px;
+}
+
+.arrow {
+  transform: rotate(800deg);
+}
+
+/* Loader */
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.pl {
+  width: 6em;
+  height: 6em;
+}
+
+.pl__ring {
+  animation: ringA 2s linear infinite;
+}
+
+.pl__ring--a {
+  stroke: #f39b51;
+}
+
+.pl__ring--b {
+  animation-name: ringB;
+  stroke: #f4b372;
+}
+
+.pl__ring--c {
+  animation-name: ringC;
+  stroke: #1b2736;
+}
+
+.pl__ring--d {
+  animation-name: ringD;
+  stroke: #d57d56;
+}
+
+/* Animations */
+@keyframes ringA {
+  from,
+  4% {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -330;
+  }
+
+  12% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -335;
+  }
+
+  32% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -595;
+  }
+
+  40%,
+  54% {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -660;
+  }
+
+  62% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -665;
+  }
+
+  82% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -925;
+  }
+
+  90%,
+  to {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -990;
+  }
+}
+
+@keyframes ringB {
+  from,
+  12% {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -110;
+  }
+
+  20% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -115;
+  }
+
+  40% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -195;
+  }
+
+  48%,
+  62% {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  70% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  90% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -305;
+  }
+
+  98%,
+  to {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -330;
+  }
+}
+
+@keyframes ringC {
+  from {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: 0;
+  }
+
+  8% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -5;
+  }
+
+  28% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -175;
+  }
+
+  36%,
+  58% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  66% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  86% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -395;
+  }
+
+  94%,
+  to {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -440;
+  }
+}
+
+@keyframes ringD {
+  from,
+  8% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: 0;
+  }
+
+  16% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -5;
+  }
+
+  36% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -175;
+  }
+
+  44%,
+  50% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  58% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  78% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -395;
+  }
+
+  86%,
+  to {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -440;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.loader {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bus {
+  padding-left: 15px;
+}
+
+.bus svg {
+  width: 30px;
+  height: 30px;
+  fill: rgb(153, 152, 152);
+  stroke-width: 0.5;
+}
+
+.bus2 {
+  padding-left: 30px;
+}
+
+.bus2 svg {
+  width: 30px;
+  height: 30px;
+  fill: rgb(153, 152, 152);
+  stroke-width: 0.5;
+}
+
+.circleOr {
+  width: 4vw; /* Relative width to scale with the viewport */
+  height: 4vw; /* Make it a perfect circle with equal width and height */
+  border: 0.2vw solid rgb(202, 202, 202); /* Adjust border size to scale proportionally */
+  position: absolute;
+  top: 51%; /* Center vertically */
+  left: 32%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center alignment using transform */
+  z-index: 1000;
+  border-radius: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleOr img {
+  width: 30px;
+  height: 30px;
+}
+
+.autocomplete-results {
+  background: #fff;
+  max-height: 150px;
+  position: absolute;
+  top: 40px;
+  width: 500px;
+  z-index: 100000000;
+}
+.autocomplete-results div {
+  padding: 10px;
+  cursor: pointer;
+}
+.autocomplete-results div:hover {
+  background-color: #f0f0f0;
+}
+
+.autocomplete-results2 {
+  background: #fff;
+  max-height: 150px;
+  position: absolute;
+  top: 80px;
+  width: 500px;
+  z-index: 100000000;
+}
+.autocomplete-results2 div {
+  padding: 10px;
+  cursor: pointer;
+}
+.autocomplete-results2 div:hover {
+  background-color: #f0f0f0;
+}
