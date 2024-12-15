@@ -183,14 +183,53 @@
             <p>01/10/2024,</p>
             <h3>10:00 AM</h3>
           </div>
-          <div class="in4" id="searchButton"><h1>SEARCH BUSES</h1></div>
+          <div class="in4" id="open-popup"><h1>SEARCH BUSES</h1></div>
         </div>
       </div>
       <div class="title">
         <h1>Track Your Buses With Ease</h1>
       </div>
-    </div>
+      <div class="popup" id="popup-card">
+        <div class="overlay"></div>
+        <div class="popup-content">
+          <div class="innerh2"><h2>BUS DETAILS</h2></div>
+          <div class="innercont">
+            <h3>Bus Number: 301</h3>
+            <h3>Bus Name: Katraj (कात्रज)</h3>
+            <h3>Route: via Swargate (स्वार्गेट मार्गे)</h3>
+          </div>
+          <div class="controls">
+            <button class="close-btn">Back</button>
+            <button class="submit-btn" id="searchButton">Proceed</button>
+          </div>
+        </div>
+      </div>
     <script>
+    function createPopup(id){
+    let popupNode = document.querySelector(id);
+    let overlay = popupNode.querySelector(".overlay");
+    let closeBtn = popupNode.querySelector(".close-btn");
+    let input1 = document.querySelector("#location-input");  // Updated ID
+    let input2 = document.querySelector("#location-input2");  // Updated ID
+    function openPopup(){
+      if (input1.value === '' || input2.value === '') {
+            alert('Please fill in both fields!');
+        } else {
+            popupNode.classList.add("active");
+        }
+    }
+    function closePopup(){
+        popupNode.classList.remove("active");
+    }
+
+    overlay.addEventListener("click", closePopup);
+    closeBtn.addEventListener("click", closePopup);
+    return openPopup;
+    }
+
+    let popup = createPopup("#popup-card");
+    document.querySelector("#open-popup").addEventListener("click", popup);
+
       const nominatimUrl = "https://nominatim.openstreetmap.org/search";
 
       function fetchSuggestions(query, resultBox) {
