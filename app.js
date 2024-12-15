@@ -16,5 +16,3 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.remove("no-scroll");
     }, 4000); // Adjust as needed
 });
-
-
